@@ -9,7 +9,12 @@
 namespace cool_name_for_your_group\hw3\views\elements;
 
 
-class Element
+abstract class Element
 {
-
+    public $view;
+    function __construct($currentView)
+    {
+        $this->view = $currentView;
+    }
+    public abstract function render($data);
 }

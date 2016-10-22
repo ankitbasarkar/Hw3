@@ -9,7 +9,7 @@
 namespace cool_name_for_your_group\hw3\views\helpers;
 
 
-class Helper
+abstract class Helper
 {
-
+    abstract function render($data);
 }
