@@ -1,6 +1,6 @@
 <?php
 //$Genres = ['Thriller','Action'];
-use ../models/model as modelclass;
+namespace cool_name_for_your_group\hw3\controllers;
 $model = new modelclass();
 $Genres = $model->fetch();
 echo "Hello";
