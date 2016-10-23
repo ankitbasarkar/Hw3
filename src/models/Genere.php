@@ -26,7 +26,4 @@ class Genere{
 	}
 }
 
-$gen = new Genere();
-$res = $gen->populateGenere();
-print_r($res);
 
