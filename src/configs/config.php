@@ -5,7 +5,7 @@ namespace myconfig;
 class config{
 	public $servername = "localhost";
 	public $username = "root";
-	public $password = "gauravabc";
+	public $password = "";
 	public $dbName = "HW3";
 	public $mycon = '';
 
@@ -21,18 +21,6 @@ class config{
 				$this->mycon = $con;
 			}
 			return $this->mycon;
-	}
-	//public static $conn = new mysqli($servername, $username, $password, $dbName);
-	// Check connection
-	/*if ($conn->connect_error) {
-		die("Connection failed: " . $conn->connect_error);
-	} 
-	else
-		echo "connection successful";
-		
-		function getConnection(){
-			return $conn;
-		}
-	}*/
-}
+	}//end of function-connect
+}//end of class
 ?>
