@@ -11,8 +11,13 @@ namespace cool_name_for_your_group\hw3\models;
 
 abstract class Model
 {
-    function __construct()
+    function getCOnnection()
     {
-        
+        $servername = "localhost";
+        $username = "root";
+        $password = "";
+
+        $conn = new mysqli($servername, $username, $password);
+        return $conn;
     }
 }

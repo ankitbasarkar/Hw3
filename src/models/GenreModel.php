@@ -1,16 +1,26 @@
 <?php
+namespace cool_name_for_your_group\hw3\models;
 
-    class Genre{
-    private $m_Genre;
-        public function insertGenreToDB($link){
-            $query = "Insert into Genre values('Thriller'),('Horror'),('Action')";
-            mysqli_query($link,$query);
+    class Genre extends Model
+    //the constructor of
+    {
+        public $generes;
+        public $connection;
+        function __construct()
+        {
+            $connection = $this->getCOnnection();
+            $this->generes = [];
         }
+        function getGeneres()
+        {
+            $resultSet = $this->connection->query("Select GenereDescription from hw3.genere");
+            if($resultSet->num_rows>0){
+                while ($row = $resultSet->fetch_array()){
+                    $this->generes[] =  $row['0'];
+                }
+            }
+            return $this->generes;
+        }
+
+
     }
-    $link = mysqli_connect('localhost','root','','ankit');
-    $query = "Create table if not EXISTS Genre(Genre varchar(10))";
-    mysqli_query($link,$query);
-
-
-
-?>
