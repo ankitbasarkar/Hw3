@@ -1,37 +1,26 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>Five Thousand Characters</title>
-</head>
-<body>
-<h1>Five Thousand Characters</h1>
-<a href="writeSomething.php">Write Something!</a>
-<h2>Check out what people are writing...</h2>
-<form>
-    <input type="text" placeholder="Phrase Filter"/>
-    <select>
-        <option selected="selected">All Genres</option>
+<?php
+/**
+ * Created by PhpStorm.
+ * User: ankit
+ * Date: 10/22/2016
+ * Time: 3:55 PM
+ */
 
-        <!--        Assume getting data from the controller in a $Genres array-->
-        <?php
-        try
-        {
-            foreach($Genres as $Genre)
-            {
-                echo "<option>$Genre</option>";
-            }
-        }
-        catch(Exception $e){
+namespace cool_name_for_your_group\hw3\views;
+require_once 'elements/elementHeader.php';
+require_once 'elements/elementFooter.php';
+use cool_name_for_your_group\hw3\views\elements\elementHeader as htmlHeader;
+use cool_name_for_your_group\hw3\views\elements\elementFooter as htmlFooter;
 
-        }
-        ?>
-    </select>
-    <button type="submit">Go</button>
+class LandingView extends View
+{
+    function render($data)
+    {
+        $head = new htmlHeader();
+        $head->render();
+        //body here please
 
-</form>
-
-<h3>Highest Rated</h3>
-<h3>Most Viewed</h3>
-<h3>Newest</h3>
-</body>
-</html>
+        $end = new htmlFooter();
+        $end->render();
+    }
+}

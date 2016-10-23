@@ -9,7 +9,10 @@
 namespace cool_name_for_your_group\hw3\models;
 
 
-class Model
+abstract class Model
 {
-
+    function __construct()
+    {
+        
+    }
 }
