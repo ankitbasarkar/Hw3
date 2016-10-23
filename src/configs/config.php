@@ -2,7 +2,7 @@
 //use cbd;
 $servername = "localhost";
 $username = "root";
-$password = "gauravabc";
+$password = "password";
 //$dbName = "HW3";
 
 
