@@ -3,10 +3,9 @@
 include "Genere.php";
 use GenereClass\Genere;
 
-$Genere = new Genere();
-//print_r($Genere->getGenere());
-$result = $Genere->getGenere();
-foreach($result as $val){
+$gen = new Genere();
+$res = $gen->populateGenere();
+foreach($res as $val){
 	echo $val;
 }
 ?>
