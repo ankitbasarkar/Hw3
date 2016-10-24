@@ -6,15 +6,15 @@
 	//use Databse HW3
 	$query[] = "use HW3";
 
-//	//CREATE TABLE GENERE AND INSERT VALUES INTO IT.
-    $query[] = "DROP TABLE IF EXISTS genere_list;";
-	$query[] = "CREATE TABLE genere_list (Genere_ID int(11) NOT NULL AUTO_INCREMENT,
-                Genere_Name varchar(20) NOT NULL, PRIMARY KEY (Genere_ID)) ;";
-	$query[] = "INSERT INTO genere_list VALUES (null,'FICTION');";
-	$query[] = "INSERT INTO genere_list VALUES (null,'COMEDY');";
-	$query[] = "INSERT INTO genere_list VALUES (null,'DRAMA');";
-	$query[] = "INSERT INTO genere_list VALUES (null,'NON FICTION');";
-	$query[] = "INSERT INTO genere_list VALUES (null,'HORROR');";
+//	//CREATE TABLE GENRE AND INSERT VALUES INTO IT.
+    $query[] = "DROP TABLE IF EXISTS genre_list;";
+	$query[] = "CREATE TABLE genre_list (Genre_ID int(11) NOT NULL AUTO_INCREMENT,
+                Genre_Name varchar(20) NOT NULL, PRIMARY KEY (Genre_ID)) ;";
+	$query[] = "INSERT INTO genre_list VALUES (null,'FICTION');";
+	$query[] = "INSERT INTO genre_list VALUES (null,'COMEDY');";
+	$query[] = "INSERT INTO genre_list VALUES (null,'DRAMA');";
+	$query[] = "INSERT INTO genre_list VALUES (null,'NON FICTION');";
+	$query[] = "INSERT INTO genre_list VALUES (null,'HORROR');";
 //
 //	//Crete table Story and Insert Values into it
     $query[] = "DROP TABLE IF EXISTS story_list;";
@@ -26,14 +26,14 @@
                 PRIMARY KEY (Story_ID));";
 
 
-//	//Create table for mapping of story and genere
-    $query[] = "DROP TABLE IF EXISTS story_genere_map;";
-	$query[] = "CREATE TABLE story_genere_map (
+//	//Create table for mapping of story and genre
+    $query[] = "DROP TABLE IF EXISTS story_genre_map;";
+	$query[] = "CREATE TABLE story_genre_map (
                 Story_ID int(11) NOT NULL,
-                Genere_ID int(11) NOT NULL,
-                PRIMARY KEY (Story_ID,Genere_ID),
-                CONSTRAINT story_genere_map_ibfk_1 FOREIGN KEY (Story_ID) REFERENCES story_list (Story_ID),
-                CONSTRAINT story_genere_map_ibfk_2 FOREIGN KEY (Genere_ID) REFERENCES genere_list (Genere_ID));";
+                Genre_ID int(11) NOT NULL,
+                PRIMARY KEY (Story_ID,Genre_ID),
+                CONSTRAINT story_genre_map_ibfk_1 FOREIGN KEY (Story_ID) REFERENCES story_list (Story_ID),
+                CONSTRAINT story_genre_map_ibfk_2 FOREIGN KEY (Genre_ID) REFERENCES genre_list (Genre_ID));";
 
 
 	//Create table for mapping RATING AND TOTAL NUMBER OF VISITORS

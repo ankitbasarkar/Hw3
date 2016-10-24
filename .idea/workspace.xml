@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="11a704d4-99e7-4aa7-acd2-ab4b1fb06b23" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/models/Story.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/configs/CreateDB.php" afterPath="$PROJECT_DIR$/src/configs/CreateDB.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/GenreModel.php" afterPath="$PROJECT_DIR$/src/models/GenreModel.php" />
     </list>
     <ignored path="Hw3.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -47,31 +47,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="selectGenere.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/views/helpers/selectGenere.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="26" column="47" selection-start-line="26" selection-start-column="47" selection-end-line="26" selection-end-column="47" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Element.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/views/elements/Element.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="350">
               <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="filterForm.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/views/elements/filterForm.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="9" column="59" selection-start-line="9" selection-start-column="59" selection-end-line="9" selection-end-column="59" />
               <folding />
             </state>
           </provider>
@@ -92,7 +72,7 @@
       <file leaf-file-name="Genere.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/models/Genere.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-175">
+            <state relative-caret-position="-25">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
                 <marker date="1477261268711" expanded="true" signature="424:460" ph="select Gener... Genere" />
@@ -104,26 +84,46 @@
       <file leaf-file-name="CreateDB.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/configs/CreateDB.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-291">
-              <caret line="29" column="54" selection-start-line="29" selection-start-column="54" selection-end-line="29" selection-end-column="54" />
+            <state relative-caret-position="875">
+              <caret line="35" column="99" selection-start-line="35" selection-start-column="99" selection-end-line="35" selection-end-column="99" />
               <folding>
-                <marker date="1477284945633" expanded="true" signature="229:261" ph="DROP TABLE I... " />
-                <marker date="1477284945633" expanded="true" signature="278:421" ph="CREATE TABLE... genere_list" />
-                <marker date="1477284945633" expanded="true" signature="278:422" ph="CREATE TABLE... Genere" />
-                <marker date="1477284945633" expanded="true" signature="439:486" ph="INSERT INTO Genere... " />
-                <marker date="1477284945633" expanded="true" signature="503:549" ph="INSERT INTO Genere... " />
-                <marker date="1477284945633" expanded="true" signature="566:611" ph="INSERT INTO Genere... " />
-                <marker date="1477284945633" expanded="true" signature="628:679" ph="INSERT INTO Genere... " />
-                <marker date="1477284945633" expanded="true" signature="696:742" ph="INSERT INTO Genere... " />
-                <marker date="1477284945633" expanded="true" signature="814:845" ph="DROP TABLE I... " />
-                <marker date="1477284945633" expanded="true" signature="862:875" ph="CREATE TABLE... WriteSomething" />
-                <marker date="1477284945633" expanded="true" signature="862:1124" ph="CREATE TABLE... story_list" />
-                <marker date="1477284945633" expanded="true" signature="1196:1233" ph="DROP TABLE I... " />
-                <marker date="1477284945633" expanded="true" signature="1250:1263" ph="CREATE TABLE... ST_GEN_MAP" />
-                <marker date="1477284945633" expanded="true" signature="1250:1637" ph="CREATE TABLE... story_genere_map" />
-                <marker date="1477284945633" expanded="true" signature="1723:1760" ph="DROP TABLE I... " />
-                <marker date="1477284945633" expanded="true" signature="1780:2255" ph="CREATE TABLE... story_statistics" />
+                <marker date="1477289284112" expanded="true" signature="228:259" ph="DROP TABLE I... " />
+                <marker date="1477289284112" expanded="true" signature="276:415" ph="CREATE TABLE... genre_list" />
+                <marker date="1477289284112" expanded="true" signature="276:416" ph="CREATE TABLE... Genere" />
+                <marker date="1477289284112" expanded="true" signature="433:479" ph="INSERT INTO Genere... " />
+                <marker date="1477289284112" expanded="true" signature="496:541" ph="INSERT INTO Genere... " />
+                <marker date="1477289284112" expanded="true" signature="558:602" ph="INSERT INTO Genere... " />
+                <marker date="1477289284112" expanded="true" signature="619:669" ph="INSERT INTO Genere... " />
+                <marker date="1477289284112" expanded="true" signature="686:731" ph="INSERT INTO Genere... " />
+                <marker date="1477289284112" expanded="true" signature="803:834" ph="DROP TABLE I... " />
+                <marker date="1477289284112" expanded="true" signature="851:864" ph="CREATE TABLE... WriteSomething" />
+                <marker date="1477289284112" expanded="true" signature="851:1113" ph="CREATE TABLE... story_list" />
+                <marker date="1477289284112" expanded="true" signature="1184:1220" ph="DROP TABLE I... " />
+                <marker date="1477289284112" expanded="true" signature="1237:1250" ph="CREATE TABLE... ST_GEN_MAP" />
+                <marker date="1477289284112" expanded="true" signature="1237:1616" ph="CREATE TABLE... story_genre_map" />
+                <marker date="1477289284112" expanded="true" signature="1702:1739" ph="DROP TABLE I... " />
+                <marker date="1477289284112" expanded="true" signature="1759:2234" ph="CREATE TABLE... story_statistics" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Story.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/models/Story.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Model.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/models/Model.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="350">
+              <caret line="19" column="63" selection-start-line="19" selection-start-column="63" selection-end-line="19" selection-end-column="63" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -176,6 +176,7 @@
         <option value="$PROJECT_DIR$/src/views/helpers/selectGenere.php" />
         <option value="$PROJECT_DIR$/src/configs/config.php" />
         <option value="$PROJECT_DIR$/src/models/GenreModel.php" />
+        <option value="$PROJECT_DIR$/src/models/Story.php" />
         <option value="$PROJECT_DIR$/src/configs/CreateDB.php" />
       </list>
     </option>
@@ -454,12 +455,12 @@
       <workItem from="1476742521292" duration="4331000" />
       <workItem from="1476915568934" duration="2101000" />
       <workItem from="1477166824768" duration="24518000" />
-      <workItem from="1477261647401" duration="11074000" />
+      <workItem from="1477261647401" duration="12614000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42024000" />
+    <option name="totallyTimeSpent" value="43564000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
@@ -674,14 +675,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/Model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="19" column="63" selection-start-line="19" selection-start-column="63" selection-end-line="19" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/views/helpers/Helper.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
@@ -778,9 +771,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/Model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="19" column="63" selection-start-line="19" selection-start-column="63" selection-end-line="19" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/models/Genere.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-175">
+        <state relative-caret-position="-25">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <marker date="1477261268711" expanded="true" signature="424:460" ph="select Gener... Genere" />
@@ -798,27 +799,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/Story.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/configs/CreateDB.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-291">
-          <caret line="29" column="54" selection-start-line="29" selection-start-column="54" selection-end-line="29" selection-end-column="54" />
+        <state relative-caret-position="875">
+          <caret line="35" column="99" selection-start-line="35" selection-start-column="99" selection-end-line="35" selection-end-column="99" />
           <folding>
-            <marker date="1477284945633" expanded="true" signature="229:261" ph="DROP TABLE I... " />
-            <marker date="1477284945633" expanded="true" signature="278:421" ph="CREATE TABLE... genere_list" />
-            <marker date="1477284945633" expanded="true" signature="278:422" ph="CREATE TABLE... Genere" />
-            <marker date="1477284945633" expanded="true" signature="439:486" ph="INSERT INTO Genere... " />
-            <marker date="1477284945633" expanded="true" signature="503:549" ph="INSERT INTO Genere... " />
-            <marker date="1477284945633" expanded="true" signature="566:611" ph="INSERT INTO Genere... " />
-            <marker date="1477284945633" expanded="true" signature="628:679" ph="INSERT INTO Genere... " />
-            <marker date="1477284945633" expanded="true" signature="696:742" ph="INSERT INTO Genere... " />
-            <marker date="1477284945633" expanded="true" signature="814:845" ph="DROP TABLE I... " />
-            <marker date="1477284945633" expanded="true" signature="862:875" ph="CREATE TABLE... WriteSomething" />
-            <marker date="1477284945633" expanded="true" signature="862:1124" ph="CREATE TABLE... story_list" />
-            <marker date="1477284945633" expanded="true" signature="1196:1233" ph="DROP TABLE I... " />
-            <marker date="1477284945633" expanded="true" signature="1250:1263" ph="CREATE TABLE... ST_GEN_MAP" />
-            <marker date="1477284945633" expanded="true" signature="1250:1637" ph="CREATE TABLE... story_genere_map" />
-            <marker date="1477284945633" expanded="true" signature="1723:1760" ph="DROP TABLE I... " />
-            <marker date="1477284945633" expanded="true" signature="1780:2255" ph="CREATE TABLE... story_statistics" />
+            <marker date="1477289284112" expanded="true" signature="228:259" ph="DROP TABLE I... " />
+            <marker date="1477289284112" expanded="true" signature="276:415" ph="CREATE TABLE... genre_list" />
+            <marker date="1477289284112" expanded="true" signature="276:416" ph="CREATE TABLE... Genere" />
+            <marker date="1477289284112" expanded="true" signature="433:479" ph="INSERT INTO Genere... " />
+            <marker date="1477289284112" expanded="true" signature="496:541" ph="INSERT INTO Genere... " />
+            <marker date="1477289284112" expanded="true" signature="558:602" ph="INSERT INTO Genere... " />
+            <marker date="1477289284112" expanded="true" signature="619:669" ph="INSERT INTO Genere... " />
+            <marker date="1477289284112" expanded="true" signature="686:731" ph="INSERT INTO Genere... " />
+            <marker date="1477289284112" expanded="true" signature="803:834" ph="DROP TABLE I... " />
+            <marker date="1477289284112" expanded="true" signature="851:864" ph="CREATE TABLE... WriteSomething" />
+            <marker date="1477289284112" expanded="true" signature="851:1113" ph="CREATE TABLE... story_list" />
+            <marker date="1477289284112" expanded="true" signature="1184:1220" ph="DROP TABLE I... " />
+            <marker date="1477289284112" expanded="true" signature="1237:1250" ph="CREATE TABLE... ST_GEN_MAP" />
+            <marker date="1477289284112" expanded="true" signature="1237:1616" ph="CREATE TABLE... story_genre_map" />
+            <marker date="1477289284112" expanded="true" signature="1702:1739" ph="DROP TABLE I... " />
+            <marker date="1477289284112" expanded="true" signature="1759:2234" ph="CREATE TABLE... story_statistics" />
           </folding>
         </state>
       </provider>
