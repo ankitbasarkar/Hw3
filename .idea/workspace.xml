@@ -2,20 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="11a704d4-99e7-4aa7-acd2-ab4b1fb06b23" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/configs/config_old.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/models/Genere.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/models/checkGenere.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/configs/CreateDB.php" afterPath="$PROJECT_DIR$/src/configs/CreateDB.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/configs/config.php" afterPath="$PROJECT_DIR$/src/configs/config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controllers/LandingController.php" afterPath="$PROJECT_DIR$/src/controllers/LandingController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/GenreModel.php" afterPath="$PROJECT_DIR$/src/models/GenreModel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/Model.php" afterPath="$PROJECT_DIR$/src/models/Model.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/LandingView.php" afterPath="$PROJECT_DIR$/src/views/LandingView.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/elements/elementHeader.php" afterPath="$PROJECT_DIR$/src/views/elements/elementHeader.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/elements/filterForm.php" afterPath="$PROJECT_DIR$/src/views/elements/filterForm.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/helpers/selectGenere.php" afterPath="$PROJECT_DIR$/src/views/helpers/selectGenere.php" />
     </list>
     <ignored path="Hw3.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,18 +23,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="LandingController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controllers/LandingController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-              <folding>
-                <element signature="e#246#312#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -125,7 +100,7 @@
       <file leaf-file-name="CreateDB.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/configs/CreateDB.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
+            <state relative-caret-position="825">
               <caret line="33" column="28" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
               <folding>
                 <marker date="1477266952677" expanded="true" signature="229:256" ph="DROP TABLE I... " />
@@ -155,6 +130,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="config_old.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/configs/config_old.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="Git.Settings">
@@ -174,7 +159,6 @@
         <option value="$PROJECT_DIR$/src/views/helpers/SubmitButton.php" />
         <option value="$PROJECT_DIR$/src/views/helpers/LandingPageAssist1.php" />
         <option value="$PROJECT_DIR$/src/views/elements/landingPageform.php" />
-        <option value="$PROJECT_DIR$/src/configs/config.php" />
         <option value="$PROJECT_DIR$/src/controllers/LandingController.php" />
         <option value="$PROJECT_DIR$/src/models/Model.php" />
         <option value="$PROJECT_DIR$/src/models/GenreModel.php" />
@@ -184,6 +168,7 @@
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/src/views/helpers/selectGenere.php" />
         <option value="$PROJECT_DIR$/src/configs/CreateDB.php" />
+        <option value="$PROJECT_DIR$/src/configs/config.php" />
       </list>
     </option>
   </component>
@@ -461,12 +446,12 @@
       <workItem from="1476742521292" duration="4331000" />
       <workItem from="1476915568934" duration="2101000" />
       <workItem from="1477166824768" duration="24518000" />
-      <workItem from="1477261647401" duration="5856000" />
+      <workItem from="1477261647401" duration="6174000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36806000" />
+    <option name="totallyTimeSpent" value="37124000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
@@ -691,14 +676,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/configs/config_old.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/models/Model.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="350">
@@ -797,9 +774,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/configs/config_old.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/configs/CreateDB.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
+        <state relative-caret-position="825">
           <caret line="33" column="28" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
           <folding>
             <marker date="1477266952677" expanded="true" signature="229:256" ph="DROP TABLE I... " />

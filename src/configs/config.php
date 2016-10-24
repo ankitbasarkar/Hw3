@@ -1,3 +1,4 @@
+<?php
 namespace myconfig;
 
 class config{
@@ -21,5 +22,5 @@ class config{
 			return $this->mycon;
 	}//end of function-connect
 }//end of class
-?>
+
 
