@@ -15,7 +15,7 @@ class Genre extends Model
         }
         function getGeneres()
         {
-            $resultSet = $this->connection->query("Select Genere_Name from hw3.genere_list");
+            $resultSet = $this->connection->query("Select Genre_Name from hw3.genre_list");
             if($resultSet->num_rows>0){
                 while ($row = $resultSet->fetch_array()){
                     $this->generes[] =  $row['0'];
