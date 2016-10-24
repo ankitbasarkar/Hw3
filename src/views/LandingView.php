@@ -17,7 +17,7 @@ use cool_name_for_your_group\hw3\views\elements\filterForm as filterForm;
 
 class LandingView extends View
 {
-    //here data has array of generes
+    //here data has array of generes and highestRatedStories Array
     function render($data)
     {
         $head = new htmlHeader(__FILE__);
@@ -31,10 +31,16 @@ class LandingView extends View
         <?php
 
         $filterForm = new filterForm(__FILE__);
-        $filterForm->render($data);
+        $filterForm->render($data[0]);
         ?>
         <h3>Highest Rated</h3>
+        <?php
+        
+        foreach ($data[1] as $story)
+            echo "<br>$story<br>";
+        ?>
         <h3>Most Viewed</h3>
+
         <h3>Newest</h3>
         <?php
 
