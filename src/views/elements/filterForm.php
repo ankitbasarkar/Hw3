@@ -7,6 +7,7 @@
  */
 
 namespace cool_name_for_your_group\hw3\views\elements;
+require_once HW3ROOT.'/src/views/helpers/selectGenere.php';
 use cool_name_for_your_group\hw3\views\helpers\selectGenere as selectGenere;
 
 

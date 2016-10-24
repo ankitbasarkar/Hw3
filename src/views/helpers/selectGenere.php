@@ -7,7 +7,8 @@
  */
 
 namespace cool_name_for_your_group\hw3\views\helpers;
-
+require_once HW3ROOT.'/src/views/helpers/Helper.php';
+use cool_name_for_your_group\hw3\views\helpers\Helper as Helper;
 
 class selectGenere extends Helper
 {
@@ -23,7 +24,7 @@ class selectGenere extends Helper
         {
             foreach($Generes as $Genre)
             {
-                ?> "<option>$Genre</option>";<?php
+                echo "<option>$Genre</option>";
             }
         }
         catch(Exception $e){

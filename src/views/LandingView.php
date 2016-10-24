@@ -7,8 +7,10 @@
  */
 
 namespace cool_name_for_your_group\hw3\views;
-require_once 'elements/elementHeader.php';
-require_once 'elements/elementFooter.php';
+require_once HW3ROOT."/src/views/View.php";
+require_once HW3ROOT.'/src/views/elements/elementHeader.php';
+require_once HW3ROOT.'/src/views/elements/elementFooter.php';
+require_once HW3ROOT.'/src/views/elements/filterForm.php';
 use cool_name_for_your_group\hw3\views\elements\elementHeader as htmlHeader;
 use cool_name_for_your_group\hw3\views\elements\elementFooter as htmlFooter;
 use cool_name_for_your_group\hw3\views\elements\filterForm as filterForm;
@@ -18,8 +20,8 @@ class LandingView extends View
     //here data has array of generes
     function render($data)
     {
-        $head = new htmlHeader();
-        $head->render();
+        $head = new htmlHeader(__FILE__);
+        $head->render(__FILE__);
         //body here please
 
         ?>
@@ -28,15 +30,15 @@ class LandingView extends View
         <h2>Check out what people are writing...</h2>
         <?php
 
-        $filterForm = new filterForm();
-        $filterForm->render();
+        $filterForm = new filterForm(__FILE__);
+        $filterForm->render($data);
         ?>
         <h3>Highest Rated</h3>
         <h3>Most Viewed</h3>
         <h3>Newest</h3>
         <?php
 
-        $end = new htmlFooter();
-        $end->render();
+        $end = new htmlFooter(__FILE__);
+        $end->render(__FILE__);
     }
 }
