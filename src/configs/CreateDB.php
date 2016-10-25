@@ -1,8 +1,13 @@
 <?php
 	namespace cdb;
-	require_once 'config.php';
-    echo "Hello";
-	$query[] = "CREATE DATABASE IF NOT EXISTS HW3;";
+	$link = mysqli_connect('localhost', 'root', 'password');
+	if (!$link) {
+    		die('Not connected : ' );	
+	}
+	else{
+		
+	//require_once 'config.php';
+    	$query[] = "CREATE DATABASE IF NOT EXISTS HW3;";
 	//use Databse HW3
 	$query[] = "use HW3";
 
@@ -21,7 +26,8 @@
 	$query[] = "CREATE TABLE story_list (
                 Story_ID int(11) NOT NULL AUTO_INCREMENT,
                 Title varchar(20) NOT NULL,
-                AUTHOR varchar(30) NOT NULL,
+                Author varchar(30) NOT NULL,
+		Identifier varchar(30) NOT NULL,
                 Story varchar(5000) DEFAULT NULL,
                 PRIMARY KEY (Story_ID));";
 
@@ -48,12 +54,8 @@
                 CONSTRAINT story_statistics_ibfk_1 FOREIGN KEY (Story_ID) REFERENCES story_list (Story_ID)); ";
 
 	foreach($query as $que){
-        if (isset($conn)) {
-            if ($conn->query($que) === TRUE) {
+            if (mysqli_query($link, $que)) {
                 echo "successfully";
-            } else {
-                echo "Error " . $conn->error;
-break;
-            }
+            } 
         }
 	}
