@@ -16,7 +16,7 @@ class selectGenere extends Helper
     {
         $Generes = $data;
     ?>
-        <select>
+        <select name='GenreFilter'>
         <option selected="selected">All Genres</option>
 
         <?php
@@ -24,7 +24,7 @@ class selectGenere extends Helper
         {
             foreach($Generes as $Genre)
             {
-                echo "<option>$Genre</option>";
+                echo "<option value=$Genre>$Genre</option>";
             }
         }
         catch(Exception $e){

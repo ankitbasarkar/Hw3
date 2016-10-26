@@ -16,8 +16,10 @@ class filterForm extends Element
     public function render($data)
     {
         ?>
-        <form>
-            <input type="text" placeholder="Phrase Filter"/>
+        <form action="index.php">
+            <input type="hidden" name="c" value="GodController">
+            <input type="hidden" name="m" value="FilterLandingPageStories">
+            <input type="text" name="TitleFilter" placeholder="Phrase Filter"/>
         <?php
         $selectGenere = new selectGenere();
         $selectGenere->render($data);
