@@ -47,10 +47,9 @@
     $query[] = "DROP TABLE IF EXISTS story_statistics;";
     $query[] = "CREATE TABLE story_statistics (
                 Story_ID int(11) NOT NULL,
-                Story_EPOCH timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
                 Story_Total_Views int(11) DEFAULT NULL,
-                NUMBER_OF_RATINGS_SO_FAR int(11) DEFAULT NULL,
-                SUM_OF_RATINGS_SO_FAR int(11) DEFAULT NULL,
+                Number_Of_Ratings_So_Far int(11) DEFAULT NULL,
+                Sum_Of_Ratings_So_Far int(11) DEFAULT NULL,
                 PRIMARY KEY (Story_ID),
                 CONSTRAINT story_statistics_ibfk_1 FOREIGN KEY (Story_ID) REFERENCES story_list (Story_ID)); ";
 
