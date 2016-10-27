@@ -29,6 +29,7 @@
                 Author varchar(30) NOT NULL,
 		Identifier varchar(30) NOT NULL,
                 Story varchar(5000) DEFAULT NULL,
+		Story_EPOCH timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
                 PRIMARY KEY (Story_ID));";
 
 
