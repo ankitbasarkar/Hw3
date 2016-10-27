@@ -23,5 +23,9 @@ if($_REQUEST['m']=='writeSomething')
 {
     $controller->writeSomething();
 }
+if($_REQUEST['m']=='ReadParticularStory')
+{
+//    $_REQUEST['Story_ID']
+}
 
 print_r($_REQUEST);

@@ -26,7 +26,6 @@ class Story extends Model
 
     //Inside Story_Statistics table
     public $Story_Total_Views;
-    public $Story_Epoch;
     public $NUMBER_OF_RATINGS_SO_FAR;
     public $SUM_OF_RATINGS_SO_FAR;
 

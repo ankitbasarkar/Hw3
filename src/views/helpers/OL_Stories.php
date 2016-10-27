@@ -15,6 +15,10 @@ class OL_Stories extends Helper
     //here data should be an array of Story Objects with id and title initialised
     function render($StoriesArray)
     {
+        if(empty($StoriesArray))
+        {
+            echo "<h5 class='Error'>No Story to Display under this Category or Filtering removed it</h5>";
+        }
         echo "<ol>";
         foreach ($StoriesArray as $StoryObj)
         {

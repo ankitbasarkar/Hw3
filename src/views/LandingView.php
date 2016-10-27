@@ -57,7 +57,7 @@ class LandingView extends View
         $OLS=new OL_Stories();
         $OLS->render($data[3]);
 
-        $end = new htmlFooter(__FILE__);
-        $end->render(__FILE__);
+        $end = new htmlFooter($this);
+        $end->render($this);
     }
 }

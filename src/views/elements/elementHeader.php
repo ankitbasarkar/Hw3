@@ -18,7 +18,8 @@ class elementHeader extends Element
         <html>
         <head>
             <meta charset="UTF-8">
-            <title>Title of the document</title>
+            <title>Title of the document</title><?php
+            echo "<link rel='stylesheet' type='text/css' href='".HW3ROOT.'/src/resources/GlobalStyle.css'."'>"?>
         </head>
 
         <body>
