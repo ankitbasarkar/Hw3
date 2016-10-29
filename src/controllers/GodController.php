@@ -65,6 +65,8 @@ class GodController extends Controller
     {
 		$storyFetch = new Story();
 		$storyData = $storyFetch->fetchStory($story_id,$userRatingValue);
+		$readStoryView = new ReadStoryView();
+		$readStoryView->render($storyData);
 		
     }
 
