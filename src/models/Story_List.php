@@ -73,7 +73,7 @@ class Story_List extends Model
                            from HW3.story_list A,HW3.Genre_List B,
                            HW3.Story_Genre_Map C,HW3.Story_Statistics D where
                            A.Story_ID = C.Story_ID and A.Story_ID = D.Story_ID and C.Genre_ID = B.Genre_ID and
-                           A.title LIKE CONCAT('%',?,'%') and B.GENRE_NAME = ? ORDER BY AVERAGE_RATING DESC"))
+                           A.title LIKE CONCAT('%',?,'%') and B.GENRE_NAME = ? ORDER BY AVERAGE_RATING DESC LIMIT 10"))
         {
             $stmt->bind_param('ss', $phraseFilter,$genreFilter);
             $stmt->execute();
@@ -122,7 +122,7 @@ class Story_List extends Model
                            from HW3.story_list A,HW3.Genre_List B,
                            HW3.Story_Genre_Map C,HW3.Story_Statistics D where
                            A.Story_ID = C.Story_ID and A.Story_ID = D.Story_ID and C.Genre_ID = B.Genre_ID and
-                           A.title LIKE CONCAT('%',?,'%') ORDER BY AVERAGE_RATING DESC"))
+                           A.title LIKE CONCAT('%',?,'%') ORDER BY AVERAGE_RATING DESC LIMIT 10"))
         {
             $stmt->bind_param('s', $phraseFilter);
             $stmt->execute();
@@ -147,7 +147,7 @@ class Story_List extends Model
                            from HW3.story_list A,HW3.Genre_List B,
                            HW3.Story_Genre_Map C,HW3.Story_Statistics D where
                            A.Story_ID = C.Story_ID and A.Story_ID = D.Story_ID and C.Genre_ID = B.Genre_ID 
-                           and B.GENRE_NAME = ? ORDER BY AVERAGE_RATING DESC"))
+                           and B.GENRE_NAME = ? ORDER BY AVERAGE_RATING DESC LIMIT 10"))
         {
             $stmt->bind_param('s', $genreFilter);
             $stmt->execute();
