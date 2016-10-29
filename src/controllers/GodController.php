@@ -10,12 +10,14 @@ namespace cool_name_for_your_group\hw3\controllers;
 require_once HW3ROOT."/src/views/LandingView.php";
 require_once HW3ROOT."/src/models/GenreModel.php";
 require_once HW3ROOT."/src/models/Story_List.php";
+require_once HW3ROOT."/src/views/ReadStoryView.php";
 require_once HW3ROOT."/src/controllers/Controller.php";
 use cool_name_for_your_group\hw3\controllers\Controller as Controller;
 use cool_name_for_your_group\hw3\models\Story_List;
 use cool_name_for_your_group\hw3\views\LandingView as LandingView;
 use cool_name_for_your_group\hw3\models\Genre as Genre;
 use cool_name_for_your_group\hw3\models\Story_List as StoryList;
+use cool_name_for_your_group\hw3\views\ReadStoryView;
 
 class GodController extends Controller
 {
