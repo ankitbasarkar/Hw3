@@ -59,9 +59,11 @@ class GodController extends Controller
     {
         echo "Writesomething";
     }
-    function ReadParticularStory()
+    function ReadParticularStory($story_id,$userRatingValue)
     {
-
+		$storyFetch = new Story();
+		$storyData = $storyFetch->fetchStory($story_id,$userRatingValue);
+		
     }
 
 }
