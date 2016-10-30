@@ -7,10 +7,14 @@ class config{
 	public $password = "";
 	public $dbName = "HW3";
 	public $mycon = '';
-
+	
+	const MAX_TITLE_LENGTH = 30;
+	const MAX_AUTHOR_LENGTH = 30;
+	const MAX_STORY_LENGTH = 5000;
+	const MAX_IDENTIFIER_LENGTH = 15;
 
 // Create connection
-  
+
 	function connect(){
 			$con = mysqli_connect($this->servername, $this->username, $this->password, $this->dbName);
 			if(!$con){
@@ -22,5 +26,3 @@ class config{
 			return $this->mycon;
 	}//end of function-connect
 }//end of class
-
-

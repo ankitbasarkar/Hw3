@@ -8,10 +8,16 @@
 
 namespace cool_name_for_your_group\hw3\views;
 require_once HW3ROOT."/src/views/View.php";
+// <<<<<<< Updated upstream
 require_once HW3ROOT.'/src/views/elements/elementHeader.php';
 require_once HW3ROOT.'/src/views/elements/elementFooter.php';
 require_once HW3ROOT.'/src/views/elements/filterForm.php';
 require_once HW3ROOT.'/src/views/helpers/OL_Stories.php';
+// =======
+require_once HW3ROOT.'/src/views/elements/elementHeader.php';
+require_once HW3ROOT.'/src/views/elements/elementFooter.php';
+require_once HW3ROOT.'/src/views/elements/filterForm.php';
+// >>>>>>> Stashed changes
 use cool_name_for_your_group\hw3\views\elements\elementHeader as htmlHeader;
 use cool_name_for_your_group\hw3\views\elements\elementFooter as htmlFooter;
 use cool_name_for_your_group\hw3\views\elements\filterForm as filterForm;
@@ -42,9 +48,15 @@ class LandingView extends View
         ?>
         <h3>Highest Rated</h3>
         <?php
+// <<<<<<< Updated upstream
         $OLS=new OL_Stories();
         $OLS->render($data[1]);
 
+// =======
+
+        foreach ($data[1] as $story)
+            echo "<br>$story<br>";
+// >>>>>>> Stashed changes
         ?>
         <h3>Most Viewed</h3>
         <?php

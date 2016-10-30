@@ -18,7 +18,7 @@ class elementHeader extends Element
         <html>
         <head>
             <meta charset="UTF-8">
-            <title>Title of the document</title>
+            <title><?= $data['title']?></title>
         </head>
 
         <body>
