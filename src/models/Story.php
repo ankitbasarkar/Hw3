@@ -24,18 +24,27 @@ class Story extends Model
     public $NUMBER_OF_RATINGS_SO_FAR;
     public $SUM_OF_RATINGS_SO_FAR;
 
-    
-	function fetchStory($story_id, $userRatingValue){
+    function __construct()
+    {
+        $this->connection = $this->getCOnnection();
+        if ($this->connection->connect_error) {
+            echo "Failed to connect";
+        }
+        else
+            echo "Connection made";
+    }
+
+    function fetchStory($story_id, $userRatingValue){
 		$cookieValue = "Story_id".$story_id;
 		$allData = array();
-		$query1 = $this->connection->query("select Author, Story, Story_EPOCH from story_list where Story_ID ='".$story_id."'");
+		$query1 = $this->connection->query("select Author, Story, Story_EPOCH from HW3.story_list where Story_ID ='".$story_id."'");
 		$result = mysqli_fetch_assoc($query1);
 		$allData[] = $story_id;
 		$allData[] = $result['Author'];
 		$allData[] = $result['Story'];
 		$allData[] = $result['Story_EPOCH'];
 		
-		$query2 = $this->connection->query("select Story_Total_Views, Sum_Of_Ratings_So_Far, Number_OF_Ratings_So_Far, Story_Total_Views from story_statistics where Story_ID = '".$story_id."'");
+		$query2 = $this->connection->query("select Story_Total_Views, Sum_Of_Ratings_So_Far, Number_OF_Ratings_So_Far, Story_Total_Views from HW3.story_statistics where Story_ID = '".$story_id."'");
 		$result = mysqli_fetch_assoc($query2);		
 			
 		if(!isset($_COOKIE[$cookieValue])){
@@ -53,12 +62,12 @@ class Story extends Model
 					}
 					//Code to Increment the number of views
 					$Story_Total_Views = $Story_Total_Views + 1;
-					$res = $this->connection->query("update story_statistics SET Story_Total_Views = '".$Story_Total_Views."' where Story_ID = '".$story_id."'");
+					$res = $this->connection->query("update HW3.story_statistics SET Story_Total_Views = '".$Story_Total_Views."' where Story_ID = '".$story_id."'");
 				}
 				else{
 					$SUM_OF_RATINGS_SO_FAR = $SUM_OF_RATINGS_SO_FAR+$userRatingValue;
 					$NUMBER_OF_RATINGS_SO_FAR = $NUMBER_OF_RATINGS_SO_FAR+1;
-					$this->connection->query("UPDATE story_statistics SET Sum_Of_Ratings_So_Far ='".$userRatingValue."', Number_Of_Ratings_So_Far = '".$NUMBER_OF_RATINGS_SO_FAR."' WHERE Story_ID='".$story_id."'");
+					$this->connection->query("UPDATE HW3.story_statistics SET Sum_Of_Ratings_So_Far ='".$userRatingValue."', Number_Of_Ratings_So_Far = '".$NUMBER_OF_RATINGS_SO_FAR."' WHERE Story_ID='".$story_id."'");
 					$Average = $SUM_OF_RATINGS_SO_FAR/$NUMBER_OF_RATINGS_SO_FAR;
 					$allData[] = $Average; // AVERAGE VALUE OF RATING AVAILABLE SO FAR.
 					
@@ -71,7 +80,7 @@ class Story extends Model
 			else{
 				$allData[] = 0; // no average rating available
 				//no  story exist yet;
-				$this->connection->query("Insert into story_statistics Values('".$story_id."','1','0','0')");
+				$this->connection->query("Insert into HW3.story_statistics Values('".$story_id."','1','0','0')");
 			}
 		}
 		else{
@@ -84,7 +93,7 @@ class Story extends Model
 			$allData[] = $userRatingValue; // user rating returned;
 			//Code to Increment the number of views
 			$Story_Total_Views = $Story_Total_Views + 1;
-			$res = $this->connection->query("update story_statistics SET Story_Total_Views = '".$Story_Total_Views."' where Story_ID = '".$story_id."'");
+			$res = $this->connection->query("update HW3.story_statistics SET Story_Total_Views = '".$Story_Total_Views."' where Story_ID = '".$story_id."'");
 		}
 			
 		

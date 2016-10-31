@@ -102,8 +102,11 @@ class GodController extends Controller
 
     function writeSomething()
     {
+        $GenreObj = new Genre();
+        $GenreArray = $GenreObj->getGeneres();
+
         $writeView = new WriteSomethingView();
-        $writeView->render(null);
+        $writeView->render($GenreArray);
     }
     function ReadParticularStory($story_id,$userRatingValue)
     {

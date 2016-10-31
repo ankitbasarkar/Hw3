@@ -18,16 +18,18 @@ if($_REQUEST['m']=='writeSomething')
     $controller->writeSomething();
 }
 
-if($_REQUEST['m'] =='ReadParticularStory'){
+if($_REQUEST['m'] =='ReadParticularStory')
+{
 	$userRatingValue = 0;
 	$story_id = $_REQUEST['Story_ID'];
-	if(empty($_REQUEST['cValue'])){
+	if(empty($_REQUEST['cValue']))
+	{
         $controller->ReadParticularStory($story_id,$userRatingValue);
 	}
-	else{
+	else
+    {
 		$userRatingValue = $_REQUEST['cValue'];
         $controller->ReadParticularStory($story_id, $userRatingValue);
 	}
-	
 }
 
