@@ -44,7 +44,7 @@ class Story extends Model
 		$allData[] = $result['Story'];
 		$allData[] = $result['Story_EPOCH'];
 		
-		$query2 = $this->connection->query("select Story_Total_Views, Sum_Of_Ratings_So_Far, Number_OF_Ratings_So_Far, Story_Total_Views from HW3.story_statistics where Story_ID = '".$story_id."'");
+		$query2 = $this->connection->query("select Story_Total_Views, Sum_Of_Ratings_So_Far, Number_Of_Ratings_So_Far, Story_Total_Views from HW3.story_statistics where Story_ID = '".$story_id."'");
 		$result = mysqli_fetch_assoc($query2);		
 			
 		if(!isset($_COOKIE[$cookieValue])){
