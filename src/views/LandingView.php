@@ -8,10 +8,16 @@
 
 namespace cool_name_for_your_group\hw3\views;
 require_once HW3ROOT."/src/views/View.php";
+
 require_once HW3ROOT.'/src/views/elements/elementHeader.php';
 require_once HW3ROOT.'/src/views/elements/elementFooter.php';
 require_once HW3ROOT.'/src/views/elements/filterForm.php';
 require_once HW3ROOT.'/src/views/helpers/OL_Stories.php';
+
+require_once HW3ROOT.'/src/views/elements/elementHeader.php';
+require_once HW3ROOT.'/src/views/elements/elementFooter.php';
+require_once HW3ROOT.'/src/views/elements/filterForm.php';
+
 use cool_name_for_your_group\hw3\views\elements\elementHeader as htmlHeader;
 use cool_name_for_your_group\hw3\views\elements\elementFooter as htmlFooter;
 use cool_name_for_your_group\hw3\views\elements\filterForm as filterForm;
@@ -28,7 +34,8 @@ class LandingView extends View
     function render($data)
     {
         $head = new htmlHeader($this);
-        $head->render($this);
+        $data['title'] = "Five Thousand Characters - Write Something";
+        $head->render($data);
         //body here please
 
         ?>

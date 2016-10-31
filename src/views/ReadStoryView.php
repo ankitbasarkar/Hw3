@@ -14,7 +14,8 @@ class ReadStoryView extends View
     function render($data)
     {
         $head = new htmlHeader($this);
-        $head->render($this);
+        $data['title'] = "Five Thousand Characters - Write Something";
+        $head->render($data);
         //body here please
 
         ?>

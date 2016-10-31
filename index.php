@@ -22,11 +22,11 @@ if($_REQUEST['m'] =='ReadParticularStory'){
 	$userRatingValue = 0;
 	$story_id = $_REQUEST['Story_ID'];
 	if(empty($_REQUEST['cValue'])){
-		$CONTROLLER->ReadParticularStory($story_id,$userRatingValue);
+        $controller->ReadParticularStory($story_id,$userRatingValue);
 	}
 	else{
 		$userRatingValue = $_REQUEST['cValue'];
-		$CONTROLLER->ReadParticularStory($story_id, $userRatingValue);
+        $controller->ReadParticularStory($story_id, $userRatingValue);
 	}
 	
 }
