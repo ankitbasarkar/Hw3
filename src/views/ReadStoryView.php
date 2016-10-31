@@ -20,15 +20,22 @@ class ReadStoryView extends View
 
         ?>
         <h1>Five Thousand Characters</h1>
-        <div>
-		<?php	
-			echo "Author :".$data[1];
-			echo "Date:".$data[3];
-			$ratingList = new ratingList();
-			$ratingList->render($data);
-			echo $data[2];
+        	<center>
+			 <div>
+				<?php	
+				echo "Author :".$data[1];
+				echo "<br/>";
+				echo "Date:".$data[3];
+				echo "<br/>";
+				$ratingList = new ratingList();
+				$ratingList->render($data); //shows rating
+				echo "<br/>";
+				echo "Average Rating: &nbsp;&nbsp;".$data[4];
+				echo "<br/>";
+				echo $data[2]; // display Story
+				echo "<br/>";
 	
-       echo "</div>";
+       			echo "</div> </center>";
        $footer = new htmlFooter();
        $footer->render($this);
     }
