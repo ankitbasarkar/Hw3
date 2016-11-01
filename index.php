@@ -1,5 +1,7 @@
 <?php
-define('HW3ROOT','c:/xampp/htdocs/Hw3');
+require_once __DIR__.'/src/configs/config.php';
+use cool_name_for_your_group\myconfig\config;
+define('HW3ROOT',config::HW3root);
 
 require_once HW3ROOT."/src/controllers/GodController.php";
 use cool_name_for_your_group\hw3\controllers\GodController as GodController;
@@ -31,5 +33,13 @@ if($_REQUEST['m'] =='ReadParticularStory')
 		$userRatingValue = $_REQUEST['cValue'];
         $controller->ReadParticularStory($story_id, $userRatingValue);
 	}
+}
+if($_REQUEST['m']=='processWriteSomething')
+{
+    $controller->processWriteSomething();
+}
+if($_REQUEST['m']=='loadLandingPage')
+{
+    $controller->loadLandingPage();
 }
 

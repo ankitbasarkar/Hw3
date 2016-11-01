@@ -7,14 +7,16 @@
  */
 
 namespace cool_name_for_your_group\hw3\models;
+require_once HW3ROOT.'/src/configs/config.php';
+use cool_name_for_your_group\myconfig\config;
 
 abstract class Model
 {
     function getCOnnection()
     {
-        $servername = "localhost";
-        $username = "root";
-        $password = "";
+        $servername = config::Servername;//"localhost";
+        $username = config::Username;//"root";
+        $password = config::Password;//"";
 
         $conn = new \mysqli($servername, $username, $password);
         return $conn;
