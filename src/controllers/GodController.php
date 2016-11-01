@@ -173,37 +173,26 @@ class GodController extends Controller
                         $data['author'] = $_REQUEST['author'];
                         $data['identifier'] = $_REQUEST['identifier'];
                         $data['GenreFilter'] = $_REQUEST['GenreFilter'];
-                        $data['story'] = $_REQUEST['story'];
+                        $data['story'] = htmlentities($_REQUEST['story']);
 
-                        $writeView = new WriteSomethingView();
-                        $writeView->render($data);
-                        print $data['story'];
                         $storyPutFetch = new Story();
                         $data[0]=$data['title'];
                         $data[1]=$data['author'];
                         $data[2]=$data['identifier'];
                         $data[3]=$data['GenreFilter'];
-                        print "<br><br>";
-                        print_r($data[3]);
-                        print "<br><br>";
-                        $data[4]=$data['story'];
+                        $data[4] = $data['story'];
 
-//
                         $retValue = $storyPutFetch->writeStory($data);
                     if($retValue)
                         $data['Message'] = "EveryThing Inserted";
                     else
                         $data['Message'] = "Unable to Insert Try again Later";
+                        $writeView = new WriteSomethingView();
+                        $writeView->render($data);
 
-//
-//                    echo "EveryThing Inserted";
-//                $data = $storyPutFetch->writeStory($data);             //inserts StoryData or Updates
                 }
             }
         }
-        $storyPutFetch = new Story();
-    $data = $storyPutFetch->fetchWrittenstory('cat');
-        print_r($data);
     }
 }
 

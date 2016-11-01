@@ -14,13 +14,14 @@ class ReadStoryView extends View
     function render($data)
     {
         $head = new htmlHeader($this);
-        $data['title'] = "Five Thousand Characters - Write Something";
+        $data['title'] = "Five Thousand Characters - Story Something";
         $head->render($data);
         //body here please
 
         ?>
-        <h1>Five Thousand Characters</h1>
-        	<center>
+        <center>
+        <a href="index.php?c=GodController&m=loadLandingPage"><h1>Five Thousand Characters</h1></a>
+
 			 <div>
 				<?php	
 				echo "Author :".$data[1];

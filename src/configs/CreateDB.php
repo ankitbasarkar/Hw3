@@ -1,6 +1,6 @@
 <?php
 	namespace cdb;
-	$link = mysqli_connect('localhost', 'root', 'password');
+	$link = mysqli_connect('localhost', 'root', '');
 	if (!$link) {
     		die('Not connected : ' );	
 	}

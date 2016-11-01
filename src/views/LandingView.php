@@ -34,19 +34,22 @@ class LandingView extends View
     function render($data)
     {
         $head = new htmlHeader($this);
-        $data['title'] = "Five Thousand Characters - Write Something";
+        $data['title'] = "Five Thousand Characters";
         $head->render($data);
         //body here please
 
         ?>
-        <h1>Five Thousand Characters</h1>
+        <center>
+        <h1 >Five Thousand Characters</h1>
         <a href="index.php?c=GodController&m=writeSomething">Write Something!</a>
         <h2>Check out what people are writing...</h2>
+
         <?php
 
         $filterForm = new filterForm($this);
         $filterForm->render($data[0]);
         ?>
+        </center>
         <h3>Highest Rated</h3>
         <?php
         $OLS=new OL_Stories();

@@ -27,11 +27,7 @@ class Story extends Model
     function __construct()
     {
         $this->connection = $this->getCOnnection();
-        if ($this->connection->connect_error) {
-            echo "Failed to connect";
-        }
-        else
-            echo "Connection made";
+
     }
 	
      function fetchWrittenStory($identifier){
@@ -93,14 +89,17 @@ class Story extends Model
 			if($query1Result){
 				$story_id = $query1Result['Story_ID'];
 				
-				foreach($data[3] as $var){
+				foreach($data[3] as $var)
+				{
 					$GenName = strtoupper($var);
 					$query4 = $this->connection->query("select Genre_ID from HW3.genre_list where Genre_Name = '".$GenName."'");
 					$genIDRow = mysqli_fetch_assoc($query4);
 					$genreID = $genIDRow['Genre_ID'];
 					$query5 = "Insert into HW3.story_genre_map values('".$story_id."', '".$genreID."')";
 					$this->connection->query($query5);
-				}					
+				}
+                $query6 = $this->connection->query("Insert into HW3.story_statistics values ('".$story_id."','0','0','0')");
+                $this->connection->query($query6);
 			}
 		}
 		$success = 1;

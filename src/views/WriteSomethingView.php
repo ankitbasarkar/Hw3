@@ -31,7 +31,7 @@ class WriteSomethingView extends View{
 			Five Thousand Characters</a> - Write Something
         </h1>
 
-		<form method="get" action="index.php">
+		<form method="post" action="index.php">
             <input type="hidden" name="c" value="GodController">
             <input type="hidden" name="m" value="processWriteSomething">
 				<label for="title">Title</label> <br>
