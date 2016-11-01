@@ -68,10 +68,10 @@ class Story_List extends Model
     function fetchHighestRatedStoryListBothFilter($phraseFilter, $genreFilter)
     {
         $stmt = $this->connection->stmt_init();
-        if ($stmt->prepare("Select DISTINCT A.STORY_ID,A.TITLE,A.AUTHOR,A.STORY,
-                           (D.SUM_OF_RATINGS_SO_FAR/D.NUMBER_OF_RATINGS_SO_FAR) AS AVERAGE_RATING 
-                           from HW3.story_list A,HW3.Genre_List B,
-                           HW3.Story_Genre_Map C,HW3.Story_Statistics D where
+        if ($stmt->prepare("Select DISTINCT A.Story_ID,A.Title,A.Author,A.Story,
+                           (D.Sum_Of_Ratings_So_Far/D.Number_Of_Ratings_So_Far) AS AVERAGE_RATING 
+                           from HW3.story_list A,HW3.genre_list B,
+                           HW3.story_genre_map C,HW3.story_statistics D where
                            A.Story_ID = C.Story_ID and A.Story_ID = D.Story_ID and C.Genre_ID = B.Genre_ID and
                            A.title LIKE CONCAT('%',?,'%') and B.GENRE_NAME = ? ORDER BY AVERAGE_RATING DESC LIMIT 10"))
         {
@@ -93,10 +93,10 @@ class Story_List extends Model
     function fetchHighestRatedStoryListNoFilter()
     {
         $stmt = $this->connection->stmt_init();
-        if ($stmt->prepare("Select DISTINCT  A.STORY_ID,A.TITLE,A.AUTHOR,A.STORY,
+        if ($stmt->prepare("Select DISTINCT  A.Story_ID,A.Title,A.Author,A.Story,
                            (D.SUM_OF_RATINGS_SO_FAR/D.NUMBER_OF_RATINGS_SO_FAR) AS AVERAGE_RATING 
-                           from HW3.story_list A,HW3.Genre_List B,
-                           HW3.Story_Genre_Map C,HW3.Story_Statistics D where
+                           from HW3.story_list A,HW3.genre_list B,
+                           HW3.story_genre_map C,HW3.story_statistics D where
                            A.Story_ID = C.Story_ID and A.Story_ID = D.Story_ID and C.Genre_ID = B.Genre_ID 
                           ORDER BY AVERAGE_RATING DESC LIMIT 10"))
         {
@@ -119,8 +119,8 @@ class Story_List extends Model
         $stmt = $this->connection->stmt_init();
         if ($stmt->prepare("Select DISTINCT A.STORY_ID,A.TITLE,A.AUTHOR,A.STORY,
                            (D.SUM_OF_RATINGS_SO_FAR/D.NUMBER_OF_RATINGS_SO_FAR) AS AVERAGE_RATING 
-                           from HW3.story_list A,HW3.Genre_List B,
-                           HW3.Story_Genre_Map C,HW3.Story_Statistics D where
+                           from HW3.story_list A,HW3.genre_list B,
+                           HW3.story_genre_map C,HW3.story_statistics D where
                            A.Story_ID = C.Story_ID and A.Story_ID = D.Story_ID and C.Genre_ID = B.Genre_ID and
                            A.title LIKE CONCAT('%',?,'%') ORDER BY AVERAGE_RATING DESC LIMIT 10"))
         {
@@ -144,8 +144,8 @@ class Story_List extends Model
         $stmt = $this->connection->stmt_init();
         if ($stmt->prepare("Select DISTINCT A.STORY_ID,A.TITLE,A.AUTHOR,A.STORY,
                            (D.SUM_OF_RATINGS_SO_FAR/D.NUMBER_OF_RATINGS_SO_FAR) AS AVERAGE_RATING 
-                           from HW3.story_list A,HW3.Genre_List B,
-                           HW3.Story_Genre_Map C,HW3.Story_Statistics D where
+                           from HW3.story_list A,HW3.genre_list B,
+                           HW3.story_genre_map C,HW3.story_statistics D where
                            A.Story_ID = C.Story_ID and A.Story_ID = D.Story_ID and C.Genre_ID = B.Genre_ID 
                            and B.GENRE_NAME = ? ORDER BY AVERAGE_RATING DESC LIMIT 10"))
         {
@@ -169,8 +169,8 @@ class Story_List extends Model
     {
         $stmt = $this->connection->stmt_init();
         if ($stmt->prepare("Select DISTINCT A.STORY_ID,A.TITLE,A.AUTHOR,A.STORY from 
-                            HW3.story_list A,HW3.Genre_List B, HW3.Story_Genre_Map C,
-                            HW3.Story_Statistics D where A.Story_ID = C.Story_ID and 
+                            HW3.story_list A,HW3.genre_list B, HW3.story_genre_map C,
+                            HW3.story_statistics D where A.Story_ID = C.Story_ID and 
                             A.Story_ID = D.Story_ID and C.Genre_ID = B.Genre_ID 
                             and A.title LIKE CONCAT('%',?,'%') and B.GENRE_NAME = ?
                             ORDER BY D.Story_Total_Views DESC LIMIT 10"))
@@ -193,8 +193,8 @@ class Story_List extends Model
     {
         $stmt = $this->connection->stmt_init();
         if ($stmt->prepare("Select DISTINCT A.STORY_ID,A.TITLE,A.AUTHOR,A.STORY from 
-                            HW3.story_list A,HW3.Genre_List B, HW3.Story_Genre_Map C,
-                            HW3.Story_Statistics D where A.Story_ID = C.Story_ID and 
+                            HW3.story_list A,HW3.genre_list B, HW3.story_genre_map C,
+                            HW3.story_statistics D where A.Story_ID = C.Story_ID and 
                             A.Story_ID = D.Story_ID and C.Genre_ID = B.Genre_ID 
                             ORDER BY D.Story_Total_Views DESC LIMIT 10"))
         {
@@ -215,8 +215,8 @@ class Story_List extends Model
     {
         $stmt = $this->connection->stmt_init();
         if ($stmt->prepare("Select DISTINCT A.STORY_ID,A.TITLE,A.AUTHOR,A.STORY from 
-                            HW3.story_list A,HW3.Genre_List B, HW3.Story_Genre_Map C,
-                            HW3.Story_Statistics D where A.Story_ID = C.Story_ID and 
+                            HW3.story_list A,HW3.genre_list B, HW3.story_genre_map C,
+                            HW3.story_statistics D where A.Story_ID = C.Story_ID and 
                             A.Story_ID = D.Story_ID and C.Genre_ID = B.Genre_ID 
                             and A.title LIKE CONCAT('%',?,'%')
                             ORDER BY D.Story_Total_Views DESC LIMIT 10"))
@@ -239,8 +239,8 @@ class Story_List extends Model
     {
         $stmt = $this->connection->stmt_init();
         if ($stmt->prepare("Select DISTINCT A.STORY_ID,A.TITLE,A.AUTHOR,A.STORY from 
-                            HW3.story_list A,HW3.Genre_List B, HW3.Story_Genre_Map C,
-                            HW3.Story_Statistics D where A.Story_ID = C.Story_ID and 
+                            HW3.story_list A,HW3.genre_list B, HW3.story_genre_map C,
+                            HW3.story_statistics D where A.Story_ID = C.Story_ID and 
                             A.Story_ID = D.Story_ID and C.Genre_ID = B.Genre_ID 
                             and B.GENRE_NAME = ?
                             ORDER BY D.Story_Total_Views DESC LIMIT 10"))
@@ -264,8 +264,8 @@ class Story_List extends Model
     {
         $stmt = $this->connection->stmt_init();
         if ($stmt->prepare("Select DISTINCT A.STORY_ID,A.TITLE,A.AUTHOR,A.STORY from 
-                            HW3.story_list A,HW3.Genre_List B, HW3.Story_Genre_Map C,
-                            HW3.Story_Statistics D where A.Story_ID = C.Story_ID and 
+                            HW3.story_list A,HW3.genre_list B, HW3.story_genre_map C,
+                            HW3.story_statistics D where A.Story_ID = C.Story_ID and 
                             A.Story_ID = D.Story_ID and C.Genre_ID = B.Genre_ID 
                             and A.title LIKE CONCAT('%',?,'%') and B.GENRE_NAME = ?
                             ORDER BY D.STORY_ID DESC LIMIT 10"))
@@ -288,8 +288,8 @@ class Story_List extends Model
     {
         $stmt = $this->connection->stmt_init();
         if ($stmt->prepare("Select DISTINCT A.STORY_ID,A.TITLE,A.AUTHOR,A.STORY from 
-                            HW3.story_list A,HW3.Genre_List B, HW3.Story_Genre_Map C,
-                            HW3.Story_Statistics D where A.Story_ID = C.Story_ID and 
+                            HW3.story_list A,HW3.genre_list B, HW3.story_genre_map C,
+                            HW3.story_statistics D where A.Story_ID = C.Story_ID and 
                             A.Story_ID = D.Story_ID and C.Genre_ID = B.Genre_ID 
                             ORDER BY D.STORY_ID DESC LIMIT 10"))
         {
@@ -311,8 +311,8 @@ class Story_List extends Model
     {
         $stmt = $this->connection->stmt_init();
         if ($stmt->prepare("Select DISTINCT A.STORY_ID,A.TITLE,A.AUTHOR,A.STORY from 
-                            HW3.story_list A,HW3.Genre_List B, HW3.Story_Genre_Map C,
-                            HW3.Story_Statistics D where A.Story_ID = C.Story_ID and 
+                            HW3.story_list A,HW3.genre_list B, HW3.story_genre_map C,
+                            HW3.story_statistics D where A.Story_ID = C.Story_ID and 
                             A.Story_ID = D.Story_ID and C.Genre_ID = B.Genre_ID 
                             and A.title LIKE CONCAT('%',?,'%')
                             ORDER BY D.STORY_ID DESC LIMIT 10"))
@@ -335,8 +335,8 @@ class Story_List extends Model
     {
         $stmt = $this->connection->stmt_init();
         if ($stmt->prepare("Select DISTINCT A.STORY_ID,A.TITLE,A.AUTHOR,A.STORY from 
-                            HW3.story_list A,HW3.Genre_List B, HW3.Story_Genre_Map C,
-                            HW3.Story_Statistics D where A.Story_ID = C.Story_ID and 
+                            HW3.story_list A,HW3.genre_list B, HW3.story_genre_map C,
+                            HW3.story_statistics D where A.Story_ID = C.Story_ID and 
                             A.Story_ID = D.Story_ID and C.Genre_ID = B.Genre_ID 
                             and B.GENRE_NAME = ?
                             ORDER BY D.STORY_ID DESC LIMIT 10"))
