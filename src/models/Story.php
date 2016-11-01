@@ -33,6 +33,79 @@ class Story extends Model
         else
             echo "Connection made";
     }
+	
+     function fetchWrittenStory($identifier){
+		$query1 = $this->connection->query("select * from HW3.story_list where Identifier ='".$identifier."'");
+		$query1Result = mysqli_fetch_assoc($query1);
+		if($query1Result){
+			$allData =array();
+			$allData[] = $query1Result['Story_ID'];
+			$allData[] = $query1Result['Title'];
+			$allData[] = $query1Result['Author'];
+			$allData[] = $query1Result['Identifier'];
+			//$allData[] = $query1['Story_ID'];
+			$query2 = $this->connection->query("select Genre_ID from HW3.story_genre_map where Story_ID ='".$alldata[0]."'");
+			$genreData = array();
+			while($row = mysqli_fetch_assoc($query2)){
+				$query3 = $this->connection->query("select Genre_Name from HW3.genre_list where Genre_ID = '".$row['Genre_ID']."'");
+				$genre_row =mysqli_fetch_assoc($query3);
+				$genre_Data[] = $genre_row['Genre_Name'];
+			}
+			$allData[] = $genre_Data[]; // 4th element in array. 
+			$allData[] = $query1Result['Story'];
+			
+			return $allData;
+			
+		}
+		else{
+			$data = -1;
+			return $data;
+		}
+			
+	}
+	function writeStory($data){
+		$identifier = $data[2];
+		$query1 = $this->connection->query("select Story_ID from HW3.story_list where Identifier ='".$data[2]."'");
+		$query1Result = mysqli_fetch_assoc($query1);
+		if($query1Result){
+			
+			
+			$story_id = $query1Result['Story_ID'];
+			$query2 = "Update HW3.story_list Set Title = '".$data[0]."' Author = '".$data[1]."' Story = '".$data[4]."' where Story_ID = '".$story_id."'";
+			$this->connection->query($query2);
+			$query3 = "Delete HW3.story_genre_map where Story_ID = '".$story_id."'";
+			$this->connection->query($query3);
+			
+			foreach($data[4] as $var){
+					$GenName = strtoupper($var);
+					$query4 = $this->connection->query("select Genre_ID from genre_list where Genre_Name = '".$GenName."'");
+					$genIDRow = mysqli_fetch_assoc($query4);
+					$genreID = $genIDRow['Genre_ID'];
+					$query5 = "Insert into story_genre_map values('".$story_id."', '".$genreID."')";
+					$this->connection->query($query5);
+				}					
+		}
+		else{
+			
+			$this->connection->query("Insert into story_list Values(null,'".$data[0]."','".$data[1]."','".$data[2]."','".$data[3]."',null)");
+			$query1 = $this->connection->query("select Story_ID from HW3.story_list where Identifier ='".$data[2]."'");
+			$query1Result = mysqli_fetch_assoc($query1);
+			if($query1Result){
+				$story_id = $query1Result['Story_ID'];
+				
+				foreach($data[4] as $var){
+					$GenName = strtoupper($var);
+					$query4 = $this->connection->query("select Genre_ID from genre_list where Genre_Name = '".$GenName."'");
+					$genIDRow = mysqli_fetch_assoc($query4);
+					$genreID = $genIDRow['Genre_ID'];
+					$query5 = "Insert into story_genre_map values('".$story_id."', '".$genreID."')";
+					$this->connection->query($query5);
+				}					
+			}
+		}
+		$success = 1;
+		return $success;
+	}
 
     function fetchStory($story_id, $userRatingValue){
 		$cookieValue = "Story_id".$story_id;
