@@ -139,7 +139,7 @@ class Story extends Model
 				else{
 					$SUM_OF_RATINGS_SO_FAR = $SUM_OF_RATINGS_SO_FAR+$userRatingValue;
 					$NUMBER_OF_RATINGS_SO_FAR = $NUMBER_OF_RATINGS_SO_FAR+1;
-					$this->connection->query("UPDATE HW3.story_statistics SET Sum_Of_Ratings_So_Far ='".$userRatingValue."', Number_Of_Ratings_So_Far = '".$NUMBER_OF_RATINGS_SO_FAR."' WHERE Story_ID='".$story_id."'");
+					$this->connection->query("UPDATE HW3.story_statistics SET Sum_Of_Ratings_So_Far ='".$SUM_OF_RATINGS_SO_FAR."', Number_Of_Ratings_So_Far = '".$NUMBER_OF_RATINGS_SO_FAR."' WHERE Story_ID='".$story_id."'");
 					$Average = $SUM_OF_RATINGS_SO_FAR/$NUMBER_OF_RATINGS_SO_FAR;
 					$allData[] = $Average; // AVERAGE VALUE OF RATING AVAILABLE SO FAR.
 					
